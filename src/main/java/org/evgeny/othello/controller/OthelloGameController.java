@@ -81,7 +81,7 @@ public class OthelloGameController {
     }
 
     private boolean validMovesAvailable() {
-        for (int i = 0;i<rows;i++){
+        for (int i=0;i<rows;i++){
             for (int j=0;j<columns;j++){
                 if (board[i][j] == Side.NONE) {
                     for (Direction direction : values()) {
@@ -176,7 +176,9 @@ public class OthelloGameController {
         if (!gameFinished){
             throw new IllegalStateException("Game is still ongoing");
         }
+
         String result = "No further moves available"+System.lineSeparator();
+
         int countDark = 0;
         int countLight = 0;
         for (int i=0;i<rows;i++){
@@ -188,6 +190,7 @@ public class OthelloGameController {
                 }
             }
         }
+
         if (countDark>countLight){
             result+="Player '"+ Side.DARK.getCharacter()+"' wins ( "+countDark+" vs "+countLight+" )";
         } else if (countLight>countDark){
