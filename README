@@ -1,0 +1,7 @@
+Evgeny's attempt at Othello game
+
+Part I
+mvn exec:java -Dexec.mainClass="org.evgeny.othello.Othello"
+
+Part II
+mvn exec:java -Dexec.mainClass="org.evgeny.othello.OthelloInteractive"
